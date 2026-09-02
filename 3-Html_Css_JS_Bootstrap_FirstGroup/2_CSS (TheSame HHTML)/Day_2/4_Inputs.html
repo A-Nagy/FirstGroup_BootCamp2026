@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+</head>
+<body>
+    <div>
+        <form>
+            
+            <label for="name">Name : </label>
+            <input type="text" id="name" required minlength="3">
+            <br>
+            <br>
+            <label for="email">Email : </label>
+            <input type="email" id="email" required>
+            <br>
+            <label for="password">Password :</label>
+            <input type="password" id="password" required minlength="6">
+            <br>  
+            <label for="bd">Birthdate : </label>
+            <input type="date" id="bd">
+            <br>
+            <label for="color">Color : </label>
+            <input type="color" id="color">
+            <br>
+            <label for="range">Range : </label>
+            <input type="range" id="range" min="0" max="100">
+            <br>
+            <label for="number">Number : </label>
+            <input type="number" id="number" min="0" max="100">
+            <br>
+            <label for="phone">Phone : </label>
+            <input type="tel" id="phone" pattern="[0-9]{11}" title="ادخل 11 رقم " >
+            <br>
+            <label for="file">Upload Files</label>
+            <input type="file" id="file">
+            <br>
+            <input type="radio" name="gender" value="male" id="male" checked>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">FeMale</label>
+            <br>
+            
+            <div>
+                <h2>أختار الهواية</h2>
+                <input type="checkbox" name="Hob" value="Reading" id="Reading" >
+                <label for="Reading">Reading</label>
+                <input type="checkbox" name="Hob" value="Sporting" id="Sporting" >
+                <label for="Sporting">Sporting</label>
+                <input type="checkbox" name="Hob" value="Coding" id="Coding" >
+                <label for="Codeing">Coding</label>
+            </div>
+            <br>
+            <label for="country">اختار دولتك  :</label>
+            <select name="country" id="country">
+                <option value="0">اختار دولتك </option>
+                <option value="egypt">مصر</option>
+                <option value="KSA">السعودية</option>
+                <option value="UAE">الامارات</option>               
+            </select>
+            <br>
+            <br>
+
+            <input list="country2">
+            <datalist id="country2" name="country2">
+                <option value="egypt">مصر</option>
+                <option value="KSA">السعودية</option>
+                <option value="UAE">الامارات</option>        
+            </datalist>
+            <br>
+            <br>
+            <button type="submit"> Submit </button>
+        
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body
+{
+    background-color: #f9f9f9;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    color: darkred;
+}
+h1,h2 , h3{
+    color: rgb(13, 192, 13);
+}
+p
+{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+ul
+{
+    list-style-type: circle;
+    padding-left: 30px;
+}
+ol
+{
+    list-style-type: upper-alpha;
+}
+
+dl dt
+{
+    font-weight: bold;
+    color: rgb(18, 18, 195);
+    margin-top: 10px;
+}
+dl dd
+{
+    margin-left: 20px;
+    color: crimson;
+
+}
+table
+{   
+     border-collapse: collapse;
+    width: 100%;
+}
+th,td
+{
+    border: 1px solid #1410f1;
+    text-align: center;
+    padding: 10px;
+}
+th
+{
+    background-color: #ccc7c7;
+}

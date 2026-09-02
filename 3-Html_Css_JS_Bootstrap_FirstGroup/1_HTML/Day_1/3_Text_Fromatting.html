@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <title>Formatting</title>
+    </head>
+    <body>
+
+         <p>
+            The <b>Chrome</b> console warning about 
+            <strong>'blocked aria-hidden on an element 
+            because its descendant retained focus' </strong> is correct,
+            not a nag, and every popular workaround for it
+            — blur() with no follow-up, setTimeout delays,
+            stripping aria-hidden, or modal={false} — actively
+            harms screen reader users by <u>leaving</u>  focus stranded on 
+            or removing the modal focus trap entirely.
+            <strike>The root defect</strike>  is an ordering bug: code hides a
+            region <mark>(via aria-hidden)</mark> while focus is still 
+            inside it, creating 'ghost focus' where a control 
+            <mark> is focusable <sub>but</sub> invisible to assistive</mark> 
+            tech.. Chrome has quietly repaired this since around 2020,
+           <i>made</i>  it loud starting with <em>Chrome 127</em> 
+            (open-time variant) and Chrome 13<sup>2</sup> 
+          </p>
+    
+          H<sub>2</sub>O
+    
+            <p>
+            Learning <b>HTML</b> is a <strong>useful skill</strong> for anyone
+            interested in web development. You can use <mark>HTML tags</mark>
+            to organize your content and make your webpage easier to understand.
+            It is <i>simple</i> to learn and can be combined with <em>CSS</em>
+            to create attractive websites.
+            </p>
+    
+            <p>Lorem ipsum dolor sit amet consectetur<b> adipisicing elit</b>.
+            Voluptatibus,<strong> qui</strong>. Distinctio facere eius tempore <i> fugiat </i> 
+            delectus <em >natus ut nihil</em>,  <mark>ad</mark>, <u>hic</u> esse <strike>laudantium</strike> laudantium dignissimos
+            <mark>voluptatibus eos,<sub>eum nemo</sub></mark>. Suscipit, ea! 16<sup>2</sup> 
+            </p>
+    </body>
+</html>

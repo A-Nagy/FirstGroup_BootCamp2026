@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        | الوظيفة     | الطريقة                                        |
+| ----------- | ---------------------------------------------- |
+| اختيار عنصر | `getElementById`, `querySelector`              |
+| قراءة نص    | `innerText`, `textContent`                     |
+| تغيير HTML  | `innerHTML`                                    |
+| الانتقال    | `parentNode`, `children`, `nextElementSibling` |
+        
+        */
+    </script>
+</head>
+<body>
+    <div>
+        <p  id="Pragraph" class="card">
+            <b>Hello</b> World !
+        </p>
+
+        <ul id="myList">
+            <li>First</li>
+            <li id="myitem">Second <a href="#"></a></li>
+            <li>Third</li>
+        </ul>
+
+        <button id="mybtn"> click me </button>
+        <input type="text" id="myinput">
+
+        <script>
+           
+
+
+            const text  = document.getElementById("Pragraph") ; 
+           // const text2 = document.querySelector(".card") ;
+
+
+            document.getElementById("mybtn").addEventListener('click',()=>{
+                text.innerText = "What's Up ? "
+            });
+
+         document.getElementById("myinput").addEventListener('input',()=>{
+                text.innerText =   document.getElementById("myinput").value;
+            });
+            
+    
+            console.log(text.innerText);
+            console.log(text.innerHTML);
+            console.log(text.textContent);
+
+            const list = document.getElementById("myList");
+            const itemlist = document.getElementById("myitem");
+           console.log( itemlist.parentNode);
+           console.log( itemlist.children);
+           console.log( itemlist.previousElementSibling);
+           console.log( itemlist.nextElementSibling);
+           const newitem = document.createElement("li");
+           newitem.innerText="NewOne";
+           list.appendChild(newitem);
+           list.removeChild(itemlist);
+
+        
+
+        </script>
+    </div>
+    
+</body>
+</html>

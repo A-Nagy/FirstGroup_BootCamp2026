@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <div>
+    <h2> ENg . Fatimah Answer</h2>
+
+    <h2>3 Marks</h2>
+
+    <label>Mark 1:</label>
+    <input type="number" id="mark1"><br><br>
+
+    <label>Mark 2:</label>
+    <input type="number" id="mark2"><br><br>
+
+    <label>Mark 3:</label>
+    <input type="number" id="mark3"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="avg"></p>
+    <p id="max"></p>
+    <p id="min"></p>
+
+    <script>
+        function calculate() {
+
+            let mark1 = Number(document.getElementById("mark1").value);
+            let mark2 = Number(document.getElementById("mark2").value);
+            let mark3 = Number(document.getElementById("mark3").value);
+
+            let average = (mark1 + mark2 + mark3) / 3;
+            let maximum = Math.max(mark1, mark2, mark3);
+            let minimum = Math.min(mark1, mark2, mark3);
+
+            document.getElementById("avg").innerHTML = "Average = " + average;
+            document.getElementById("max").innerHTML = "Max = " + maximum;
+            document.getElementById("min").innerHTML = "Min = " + minimum;
+        }
+    </script>
+
+</div>
+
+<div>
+    <h2>Check the Day</h2>
+
+    <input type="text" id="day" placeholder="Enter a day">
+
+    <button onclick="checkDay()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkDay() {
+
+            let day = document.getElementById("day").value.toLowerCase();
+
+            if (day == "friday" || day == "saturday") {
+                document.getElementById("result").innerHTML = "Weekend";
+            }
+            else if (day == "sunday" || day == "monday" || 
+                     day == "tuesday" || day == "wednesday" || 
+                     day == "thursday") {
+                document.getElementById("result").innerHTML = "Work Day";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Invalid Day";
+            }
+        }
+    </script>
+</div>
+    <script>
+        /*
+        var salary = parseInt(prompt("Pls Enter Your Salary"));
+        var annualsalary = salary * 12 ;
+
+        document.write("<h2>Annual Salary is ",annualsalary,"</h2>");
+
+        if(salary >= 12000)
+        {
+             document.write("<h2> High Salary</h2>");
+        }
+        else if(salary >= 6000)
+        {
+             document.write("<h2> Normal Salary</h2>");
+        }
+        else
+        {
+             document.write("<h2> Low Salary</h2>");
+        }
+        */
+       /*
+        var m1 = parseFloat( prompt("pls Enter Your Mark")) ;
+        var m2 = parseFloat( prompt("pls Enter Your Mark")) ;
+        var m3 = parseFloat( prompt("pls Enter Your Mark")) ;
+
+        var avg = (m1+m2+m3) / 3 ;
+
+        document.write(`<h1>Mark  Avrgae:${Math.round(avg)} </h1>`);
+        document.write(`<h1>Best  Mark : ${Math.max(m1,m2,m3)} </h1>`);
+        document.write(`<h1>Worst MArk : ${Math.min(m1,m2,m3)} </h1>`);
+        */
+       /*
+       var day = parseInt(prompt("pls Enter Day Number"));
+       if(day >=1 && day <=5)
+       {
+        document.write("<h2> Work Day</h1> ");
+       }
+       else if(day == 6 || day == 7 )
+       {
+        document.write("<h2>Week End</h1> ");
+       }
+       else
+       {
+        document.write("<h2>Invalid Day</h1> ");
+       }
+     */
+    /*
+     let x =Math.round(Math.random()*10) ;
+     let y =Math.round(Math.random()*10) ;
+
+     let answer =parseInt(prompt(`What's The Result Of ${x} * ${y} ?`))
+
+     if(answer == x*y)
+     {
+        document.write("<h2>Correct</h1> ");
+     }else
+     {
+        document.write("<h2>Wrong</h1> ");
+     }
+*/
+    </script>
+
+</body>
+</html>

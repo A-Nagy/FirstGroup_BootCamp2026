@@ -1,0 +1,14 @@
+
+### `task_1_show_age.html`
+- User inputs their age and it's shown in a message below.
+
+### `task_2_show_all_data.html`
+- Input for name, age, and email – all values shown together.
+
+### `task_3_greeting_by_time.html`
+- Basic version: Displays a greeting message based on system time (Morning, Afternoon, Evening) without requiring user input. (updated)
+- PREVIOUS: Greeting message changes based on current system time.
+
+### `task_4_Greeting.html`
+- Enhanced version: Prompts user for their name and displays a personalized greeting based on time (e.g., 'Good Morning, Sarah!'). (updated)
+- PREVIOUS: Variation of the greeting task – likely enhanced or styled differently.

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2> Welcome To js </h2>
+        <p id="demo">JavaScript can Change Html</p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML='<b>Js</b> Changes <u> Html</u>'">Click me</button>
+    </div>    
+    <div>
+        <h2>Change Attribute value</h2>
+        <img id="myimg" src="pic_bulbon.gif" alt="img1" style="width: 200px;">
+        <br>
+        <button onclick="document.getElementById('myimg').src='pic_bulboff.gif'">Trun Off</button>
+        <button onclick="document.getElementById('myimg').src='pic_bulbon.gif'">Trun On</button>
+    </div>
+</body>
+</html>

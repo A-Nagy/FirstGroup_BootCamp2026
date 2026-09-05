@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Data 2 </title>
+    <style>
+        .cardstyle
+        {
+            font-size: 18px;
+            border: 1px solid #b7b3b3;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Team Page</h2>
+        <section id="TeamSction">
+
+        </section>
+        <script>
+ const team = [
+      { name: "Ali", job: "Developer", city: "Riyadh" },
+      { name: "Sara", job: "Designer", city: "Jeddah" },
+      { name: "Omar", job: "Manager", city: "Dammam"  },
+      { name: "Lina", job: "Engineer", city: "Makkah" }
+    ];
+
+    const section = document .getElementById("TeamSction");
+    team.forEach(member=>{
+        const card = document.createElement("div");
+        card.className= "cardstyle" ; 
+        card.innerHTML=
+        `   <h2>${member.name}</h3>
+            <p> <b>Job : </b> ${member.job}</p>
+            <p>City :${ member.city} </p>
+        `;
+        section.appendChild(card);
+    });
+
+        </script>
+    </div>
+    <div></div>
+</body>
+</html>
+
+ 

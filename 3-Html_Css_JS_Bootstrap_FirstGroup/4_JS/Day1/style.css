@@ -1,0 +1,13 @@
+  body{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            padding: 30px;
+        }
+        .output{
+            margin:20px ;
+            padding: 10px;
+            background-color: aquamarine;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }

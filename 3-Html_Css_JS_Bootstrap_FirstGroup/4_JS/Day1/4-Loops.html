@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <h1>Loops Exampls </h1>
+<div>
+    <h2>Print Numbers 1 to 10</h2>
+    <ul id="numberlist">
+
+    </ul>
+    <script>
+        const list = document.getElementById("numberlist");
+
+        for(let i = 1 ; i <= 5 ; i++)
+        {
+          const item = document.createElement("li");
+          item.textContent = "Number : " + i;
+          list.appendChild(item)
+        }
+    </script>
+</div>
+<div>
+    <h2>Simple Data Genrate</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Square</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    <script>
+        const tbody = document.getElementById("tableBody") ;
+        for(let c =1 ; c <= 5 ; c++)
+        {
+            const row =document.createElement('tr');
+            row.innerHTML=` <td>${c}</td><td>${c*c}</td>`;
+            tbody.appendChild(row)
+        }
+
+    </script>
+   
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>

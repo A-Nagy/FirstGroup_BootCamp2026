@@ -1,0 +1,31 @@
+
+ Display Data from Array**  
+**Objective:** Use a local array of user objects (containing `name` and `email`) and display the data in an HTML table.
+
+**Example:**
+```javascript
+const users = [
+  { name: "Ali Ahmed", email: "ali@example.com" },
+  { name: "Sara Mostafa", email: "sara@example.com" },
+  { name: "Omar Khalid", email: "omar@example.com" }
+];
+
+ Get Data from Public API**
+**Objective:** Use `fetch()` to get data from [https://fakestoreapi.com/products](https://fakestoreapi.com/products), and display each product (title, price, and image) inside a card layout in a section.
+
+=======================================================
+
+### ✅ Task 1 – Live Character Counter
+As the user types in a textarea, show how many characters remain out of 100.
+
+### ✅ Task 2 – Dynamic Form Validation
+Validate name, email, and phone number fields. Show errors if any field is empty or invalid.
+
+### ✅ Task 3 – Filter List on Search
+Display a list of names. When the user types in a search box, show only matching names.
+
+### ✅ Task 4 – Add and Remove Items Dynamically
+Allow the user to add an item to a list and remove it using a delete button next to each item.
+
+### ✅ Task 5 – Toggle FAQ Questions
+Clicking on a question toggles visibility of the answer using class toggle.

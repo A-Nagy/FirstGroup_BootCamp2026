@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+</head>
+<body>
+
+    <div>
+        <h2>Task1</h2>
+        <h2>Show Age</h2>
+        <label for="ageinput">Enter Age : </label>
+        <input type="number" id="ageinput">
+        <button onclick="showAge()">Show Age</button>
+       
+<script>
+    function showAge()
+    {
+        let age = document.getElementById("ageinput").value;
+        if(age.trim()==="")
+        {
+            document.getElementById("result").innerText="Plese Enter Your Age";
+        }
+        else
+        {
+            document.getElementById("result").innerText=`your Age is ${age} Year `;
+        }
+    }
+</script>
+    </div>
+
+     <div>
+        <h2>Task2</h2>
+        <h2>Show Data</h2>
+        <label for="nameinput">Enter Name : </label>
+        <input type="text" id="nameinput">
+<br><br>
+         <label for="ageinput2">Enter Age : </label>
+        <input type="number" id="ageinput2">
+<br><br>
+         <label for="emailinput">Enter Email : </label>
+        <input type="email" id="emailinput">
+
+        <button onclick="showData()">Show Age</button>
+ 
+<script>
+    function showData()
+    {
+         let name = document.getElementById("nameinput").value;
+         let age2 = document.getElementById("ageinput2").value;
+         let email = document.getElementById("emailinput").value;
+
+        if(!name || !age2 || !email )
+        {
+            document.getElementById("result").innerText="Plese Enter Your Data";
+        }
+        else
+        {
+            document.getElementById("result").innerText=`
+              Your Name is : ${name} \n
+              your Age is  : ${age2} Year 
+           \n your Email is: ${email}`;
+        }
+    }
+</script>
+    </div>
+
+    <div>
+        <h2>Task 3</h2>
+        <button onclick="greetByTime()"> Greeting me</button>
+        <script>
+            function greetByTime()
+            {
+                const hour = new Date().getHours();
+                let greeting = "";
+                if(hour < 12 )
+                {
+                    greeting = "Good Morning";
+                }
+                else if(hour < 18 )
+                {
+                    greeting = "Good Afternoon";
+                }
+                else
+                {
+                    greeting = "Good Evening";
+                }
+                document.getElementById("result").innerText=greeting;
+            }
+        </script>
+    </div>
+
+      <div>
+        <h2>Task 4</h2>
+
+        <label for="Gname">Enter Name : </label>
+        <input type="text" id="Gname">
+
+        <button onclick="greetingMe()"> Greeting me</button>
+        <script>
+            function greetingMe()
+            {
+                const name = document.getElementById("Gname").value;
+                const Dhour = new Date().getHours();
+                let greeting2 = "";
+                if(Dhour < 12 )
+                {
+                    greeting2 = "Good Morning , "+ name ;
+                }
+                else if(Dhour < 18 )
+                {
+                    greeting2 = "Good Afternoon , "+ name ;
+                }
+                else
+                {
+                    greeting2 = "Good Evening ," + name ;
+                }
+                document.getElementById("result").innerText=greeting2;
+            }
+        </script>
+    </div>
+
+     <div id="result"></div>
+
+</body>
+</html>

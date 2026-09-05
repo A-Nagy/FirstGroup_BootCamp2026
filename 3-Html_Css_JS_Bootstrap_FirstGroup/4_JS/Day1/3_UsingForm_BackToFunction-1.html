@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+ 
+</head>
+<body>
+<div>
+    <h1>Mage Example</h1>
+
+    <label for="userInput">ُEnter Your Name </label>
+    <input type="text" name="userInput" id="userInput">
+
+    <button onclick="displayWelcomeMessage()">Show Massage</button>
+
+    <div class="output" id="result"></div>
+</div>
+<div>
+ <h1>Student Grade</h1>
+
+    <label for="mark">Enter Your Mark:</label>
+
+    <input type="number" id="mark">
+
+    <button onclick="checkScore()">Check Score</button>
+    
+    <script>
+
+        function checkScore() {
+
+            let mark = Number(document.getElementById("mark").value);
+
+            if (mark >= 90) {
+                document.getElementById("result").innerHTML = "Excellent";
+            }
+            else if (mark >= 70) {
+                document.getElementById("result").innerHTML = "Very Good";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Keep Trying";
+            }
+
+        }
+
+    </script>
+</div>   
+
+
+</body>
+</html>

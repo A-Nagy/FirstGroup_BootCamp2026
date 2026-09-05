@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Data</title>
+</head>
+<body>
+
+    <div> 
+    <h2>From Array List</h2>
+    <table border="1" id="StudentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+  const students = [
+      { name: "Sara", age: 20, grade: "A" },
+      { name: "Ali" , age: 22, grade: "B+" },
+      { name: "Lina", age: 19, grade: "A-" },
+      { name: "Omar", age: 21, grade: "B"  }
+    ];
+    const tablebody = document.querySelector("#StudentTable tbody") ; 
+
+    for(let i = 0 ; i < students.length ; i++ )
+    {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+                <td>${students[i].name}</td>
+                <td>${students[i].age}</td>
+                <td>${students[i].grade}</td>
+        `;
+        tablebody.appendChild(row);
+
+    }
+    </script>
+    </div>
+
+    <div>
+        <h1>Student List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTables">
+        </tbody>
+    </table>
+
+    <script>
+        const studentss = [
+            { name: "Ali", grade: 90 },
+            { name: "Sara", grade: 85 },
+            { name: "Omar", grade: 78 }
+        ];
+
+        const table = document.getElementById("studentTables");
+
+        for (let i = 0; i < studentss.length; i++) {
+
+            const row = document.createElement("tr");
+
+            const nameCell = document.createElement("td");
+            nameCell.textContent = studentss[i].name;
+
+            const gradeCell = document.createElement("td");
+            gradeCell.textContent = studentss[i].grade;
+
+            row.appendChild(nameCell);
+            row.appendChild(gradeCell);
+
+            table.appendChild(row);
+        }
+    </script>
+    </div>
+
+    <div>
+        <h2>Fetch Data From Api </h2>
+        <button onclick="LoadData()">Load</button>
+        <br>
+        <table border="1" id="usersTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>city</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+<script>
+  async function LoadData()
+   {
+    const responce =await fetch("https://jsonplaceholder.typicode.com/users");
+    const users    =await responce.json();
+
+    const tbody = document.querySelector("#usersTable tbody");
+    tbody.innerHTML="";
+
+    users.forEach(user => {
+        const row = document.createElement("tr");
+        row.innerHTML=
+        `    <td>${user.name}</td>
+             <td>${user.email}</td>
+             <td>${user.address.city}</td>
+        `;
+        tbody.appendChild(row);
+        
+    });
+
+   }
+</script>
+    </div>
+ 
+
+</body>
+</html>
+ 

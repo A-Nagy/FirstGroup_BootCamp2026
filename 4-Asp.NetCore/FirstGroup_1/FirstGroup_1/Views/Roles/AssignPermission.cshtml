@@ -1,0 +1,30 @@
+﻿@model Role
+@{
+    ViewData["Title"] = "Assign Permission";
+    IEnumerable<Permission> allPermissions = ViewBag.AllPermissions;
+    IEnumerable<int> AssigenedIds = ViewBag.RolePermission; 
+}
+
+<h1> @ViewData["Title"] </h1>
+<h2>@Model.Name Permissions : </h2>
+<hr />
+
+<form asp-action="AssignPermission" method="post">
+
+    <input type="hidden" name="roleId" value="@Model.Id"/>
+
+    @foreach (var permission in allPermissions) 
+    { 
+    <div class="form-check mb-2">
+        <input class="form-check-input"
+               type="checkbox" 
+               name="permissionIds" 
+               value="@permission.Id"
+               checked="@(AssigenedIds!.Contains(@permission.Id))" />
+        <label class="form-check-label">@permission.Name</label>
+    </div>
+    }
+
+    <button type="submit" class="btn btn-dark"> Save </button>
+</form>
+

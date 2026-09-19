@@ -14,6 +14,13 @@ namespace FirstGroup_1.Data
         // Define your DbSets here
         // public DbSet<YourEntity> YourEntities { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
+   
 
 
        

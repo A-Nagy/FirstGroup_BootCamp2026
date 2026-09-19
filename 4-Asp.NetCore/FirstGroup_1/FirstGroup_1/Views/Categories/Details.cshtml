@@ -1,0 +1,27 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Details Category Data";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="/" method="post">
+    <input asp-for="Id" type="hidden" />
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+     
+    <a class="btn btn-warning" asp-action="Update" asp-route-Id="@Model.Id">Update</a>
+    <a class="btn btn-danger"  asp-action="Delete" asp-route-Id="@Model.Id">Delete</a>
+    <a class="btn btn-primary" asp-action="Index">Go to Index Page</a>
+
+</form>

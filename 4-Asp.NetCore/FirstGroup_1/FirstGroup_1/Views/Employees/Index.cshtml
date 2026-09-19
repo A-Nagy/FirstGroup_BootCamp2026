@@ -63,6 +63,7 @@
             <th>City</th>
             <th>Phone</th>
             <th>Email</th>
+            <th>Department</th>
         </tr>
     </thead>
     <tbody>
@@ -76,6 +77,12 @@
                 <td>@employee.City</td>
                 <td>@employee.Phone</td>
                 <td>@employee.Email</td>
+                <td>@employee.Department?.Name</td>
+                <td>
+                    <a class="btn btn-secondary" asp-action="Details" asp-route-Id="@employee.Id">Details</a>
+                    <a class="btn btn-warning"   asp-action="Update" asp-route-Id="@employee.Id">Update</a>
+                    <a class="btn btn-danger"    asp-action="Delete" asp-route-Id="@employee.Id">Delete</a>
+                </td>
             </tr>
 
         }

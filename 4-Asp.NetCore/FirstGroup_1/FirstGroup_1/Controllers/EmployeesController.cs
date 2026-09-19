@@ -1,6 +1,8 @@
 ﻿using FirstGroup_1.Data;
 using FirstGroup_1.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace FirstGroup_1.Controllers
 {
@@ -97,14 +99,38 @@ namespace FirstGroup_1.Controllers
             // Retrieve the list of employees from the database using Entity Framework
             // 'ToList()' It Equal Select all employees from the Employees table in the database and convert them to a list.
            
-            List<Employee> Employees =  _context.Employees.ToList();
-
+            List<Employee> Employees =  _context.Employees.Include(e=>e.Department).ToList();
+            //include() Load Realeted Department Data
             return View(Employees);
         }
+        [HttpGet]
+        public IActionResult GetAllEmployees()
+        {
 
+            //  List<Employee> Employees = _context.Employees.Include(e => e.Department).ToList();
+            List<Employee> Employees = _context.Employees.ToList();
+            return Ok(Employees);
+            // View()     : Screen
+            // NotFound() : Not Found Screen
+            // Content()  : Text
+            // Ok()       : Data
+            // BadRequest() :Error Data
+            // RedirectTo Action() : Retrive Data from Anther Action
+        }
+
+        public IActionResult Details(int Id)
+        {
+            Employee? emp = _context.Employees.Include(e => e.Department).FirstOrDefault(e=> e.Id==Id);
+            if (emp == null)
+            {
+                return NotFound();
+            }
+            return View(emp);
+        }
         [HttpGet]
         public IActionResult Create() 
         {
+            LoadDepartments();
             return View();
         }
 
@@ -119,8 +145,60 @@ namespace FirstGroup_1.Controllers
 
                 return RedirectToAction("Index");
             }
+          //  LoadDepartments();
             return View(emp);
       
         }
+
+        [HttpGet]
+        public IActionResult Update(int Id) 
+        {
+           Employee? emp = _context.Employees.Find(Id);
+            if (emp == null)
+            {
+                return NotFound();
+            }
+            LoadDepartments();
+            return View(emp);
+        }
+        [HttpPost]
+        public IActionResult Update(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Employees.Update(employee);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            LoadDepartments();
+            return View(employee);
+        }
+        [HttpGet]
+        public IActionResult Delete(int Id)
+        {
+            Employee? emp = _context.Employees.Find(Id);
+            if (emp == null)
+            {
+                return NotFound();
+            }
+            LoadDepartments();
+            return View(emp);
+        }
+        [HttpPost]
+        public IActionResult Delete(Employee employee)
+        {
+            
+                _context.Employees.Remove(employee);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+           
+          
+        }
+        private void LoadDepartments()
+        {
+            IEnumerable<Department> departments =_context.Departments.ToList();
+            ViewBag.Departments = new SelectList(departments,"Id","Name");
+        }
+
     }
 }

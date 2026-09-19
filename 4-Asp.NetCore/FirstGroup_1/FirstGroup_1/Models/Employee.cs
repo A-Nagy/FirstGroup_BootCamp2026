@@ -26,5 +26,9 @@ namespace FirstGroup_1.Models
         [Range(3000,10000, ErrorMessage = "Salary must be between 3000 and 10000.")]
         public decimal Salary { get; set; }
 
+        public int? DepartmentId { get; set; }
+        //navigation property 
+        public Department? Department { get; set; }
+
     }
 }

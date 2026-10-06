@@ -263,3 +263,5 @@ H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1\bi
 H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutLogin.cshtml.rz.scp.css
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutDashboard.cshtml.rz.scp.css

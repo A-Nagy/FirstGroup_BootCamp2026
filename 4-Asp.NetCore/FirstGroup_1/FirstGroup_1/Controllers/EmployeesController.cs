@@ -1,11 +1,14 @@
 ﻿using FirstGroup_1.Data;
 using FirstGroup_1.Models;
+using FirstGroup_1.Security;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace FirstGroup_1.Controllers
 {
+    [Authorize]
     public class EmployeesController : Controller
     {
         //// Old code for Index action method
@@ -92,17 +95,24 @@ namespace FirstGroup_1.Controllers
         }
 
 
-
+        [Authorize(Policy =PermissionsNames.EmployeeView)]
         [HttpGet]
         public IActionResult Index()
         {
             // Retrieve the list of employees from the database using Entity Framework
             // 'ToList()' It Equal Select all employees from the Employees table in the database and convert them to a list.
            
-            List<Employee> Employees =  _context.Employees.Include(e=>e.Department).ToList();
+            List<Employee> Employees =  _context.Employees.Include(e => e.Department).ToList();
             //include() Load Realeted Department Data
             return View(Employees);
         }
+        // Content : Text 
+        // View    : interface / Screen
+        // NotFound: Error Screen
+        // Ok     : Api (Data In Json)
+        // BadRequest: Error For Api
+        // RedirectTo Action() : Retrive Data from Anther Action
+
         [HttpGet]
         public IActionResult GetAllEmployees()
         {
@@ -117,7 +127,7 @@ namespace FirstGroup_1.Controllers
             // BadRequest() :Error Data
             // RedirectTo Action() : Retrive Data from Anther Action
         }
-
+        [Authorize(Roles ="Admin")]
         public IActionResult Details(int Id)
         {
             Employee? emp = _context.Employees.Include(e => e.Department).FirstOrDefault(e=> e.Id==Id);
@@ -127,13 +137,14 @@ namespace FirstGroup_1.Controllers
             }
             return View(emp);
         }
+        [Authorize(Policy = PermissionsNames.EmployeeCreate)]
         [HttpGet]
         public IActionResult Create() 
         {
             LoadDepartments();
             return View();
         }
-
+        [Authorize(Policy = PermissionsNames.EmployeeCreate)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Employee emp)
@@ -149,7 +160,7 @@ namespace FirstGroup_1.Controllers
             return View(emp);
       
         }
-
+        [Authorize(Policy =PermissionsNames.EmployeeEdit)]
         [HttpGet]
         public IActionResult Update(int Id) 
         {
@@ -161,7 +172,9 @@ namespace FirstGroup_1.Controllers
             LoadDepartments();
             return View(emp);
         }
+        [Authorize(Policy = PermissionsNames.EmployeeEdit)]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Update(Employee employee)
         {
             if (ModelState.IsValid)
@@ -174,6 +187,7 @@ namespace FirstGroup_1.Controllers
             return View(employee);
         }
         [HttpGet]
+        [Authorize(Policy = PermissionsNames.EmployeeDelete)]
         public IActionResult Delete(int Id)
         {
             Employee? emp = _context.Employees.Find(Id);
@@ -184,7 +198,9 @@ namespace FirstGroup_1.Controllers
             LoadDepartments();
             return View(emp);
         }
+        [Authorize(Policy = PermissionsNames.EmployeeDelete)]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Delete(Employee employee)
         {
             

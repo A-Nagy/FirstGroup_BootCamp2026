@@ -58,3 +58,11 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\styles.css
+wwwroot\js\datatables-simple-demo.js
+wwwroot\js\scripts.js
+wwwroot\assets\demo\chart-area-demo.js
+wwwroot\assets\demo\chart-bar-demo.js
+wwwroot\assets\demo\chart-pie-demo.js
+wwwroot\assets\demo\datatables-demo.js
+wwwroot\assets\img\error-404-monochrome.svg

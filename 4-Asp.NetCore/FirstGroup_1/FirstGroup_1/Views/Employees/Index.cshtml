@@ -1,4 +1,5 @@
-﻿@* Old Code *@
+﻿@using FirstGroup_1.Security
+@* Old Code *@
 @* @model List<Employee>
 
 <h1>Employees Infromation</h1>
@@ -47,8 +48,11 @@
 @model List<Employee>
 
 <h1>Employees Infromation</h1>
+@if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeCreate))
+{
+    <a asp-action="Create" class="btn btn-success">Add New Employee</a>
+}
 
-<a asp-action="Create" class="btn btn-success">Add New Employee</a>
 
 <br />
 <br />
@@ -79,9 +83,18 @@
                 <td>@employee.Email</td>
                 <td>@employee.Department?.Name</td>
                 <td>
-                    <a class="btn btn-secondary" asp-action="Details" asp-route-Id="@employee.Id">Details</a>
-                    <a class="btn btn-warning"   asp-action="Update" asp-route-Id="@employee.Id">Update</a>
-                    <a class="btn btn-danger"    asp-action="Delete" asp-route-Id="@employee.Id">Delete</a>
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeEdit))
+                    {
+                        <a class="btn btn-warning" asp-action="Update" asp-route-Id="@employee.Id">Update</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeDelete))
+                    {
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-Id="@employee.Id">Delete</a>
+                    }
+                    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeDetails))
+                    {
+                        <a class="btn btn-secondary" asp-action="Details" asp-route-Id="@employee.Id">Details</a>
+                    }
                 </td>
             </tr>
 

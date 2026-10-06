@@ -1,0 +1,31 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Assign Role";
+    IEnumerable<Role> AllRoles = ViewBag.AllRoles;
+    IEnumerable<int> AssigenedIds = ViewBag.UserRoles;
+}
+
+<h1> @ViewData["Title"] </h1>
+
+<h2>@Model.Name Roles : </h2>
+<hr />
+
+<form asp-action="AssignRole" method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    @foreach (var role in AllRoles)
+    {
+        <div class="form-check mb-2">
+            <input class="form-check-input"
+                   type="checkbox"
+                   name="rolesIds"
+                   value="@role.Id"
+                   checked="@(AssigenedIds!.Contains(role.Id))" />
+            <label class="form-check-label">@role.Name</label>
+        </div>
+    }
+
+    <button type="submit" class="btn btn-dark"> Save </button>
+</form>
+

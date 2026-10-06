@@ -155,5 +155,42 @@ namespace FirstGroup_1.Controllers
         }
 
         /// Task Make Assign Roles  (Like Assign Permissions)
+        /// 
+        [HttpGet]
+        public IActionResult AssignRole(int Id)
+        {
+            User? user = _context.Users.Include(u => u.Roles).FirstOrDefault(u => u.Id == Id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            List<Role> roles = _context.Roles.ToList();
+            ViewBag.AllRoles = roles;
+
+            ViewBag.UserRoles = user.Roles.Select(r => r.Id).ToList();
+
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult AssignRole(int Id, List<int> rolesIds)
+        {
+            User? user = _context.Users.Include(u => u.Roles).FirstOrDefault(u => u.Id == Id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            user.Roles.Clear();
+
+            List<Role> SelectRole = _context.Roles.Where(r => rolesIds.Contains(r.Id)).ToList();
+
+            foreach (Role role in SelectRole)
+            {
+                user.Roles.Add(role);
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

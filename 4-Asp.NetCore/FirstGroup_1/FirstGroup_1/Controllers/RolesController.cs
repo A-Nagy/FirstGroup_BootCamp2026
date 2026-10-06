@@ -1,5 +1,7 @@
 ﻿using FirstGroup_1.Data;
 using FirstGroup_1.Models;
+using FirstGroup_1.Security;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace FirstGroup_1.Controllers
 {
+  //  [Authorize(Policy = "Roles.Mangment")]
     public class RolesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -21,6 +24,7 @@ namespace FirstGroup_1.Controllers
         }
 
         // GET: Roles
+       
         public async Task<IActionResult> Index()
         {
             return View(await _context.Roles.ToListAsync());

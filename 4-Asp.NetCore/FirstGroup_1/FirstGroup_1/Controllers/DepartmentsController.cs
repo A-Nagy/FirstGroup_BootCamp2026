@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FirstGroup_1.Data;
 using FirstGroup_1.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FirstGroup_1.Controllers
 {
+    [Authorize]
     public class DepartmentsController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -10,7 +10,7 @@ namespace FirstGroup_1.Controllers
         public IActionResult Index()
         {
             // return Content("Text Return");
-            ViewBag.MyName = "Ahmad";
+            //ViewBag.MyName = "Ahmad";
 
             //ViewBag.EmployeeName    = "Ahmad";
             //ViewBag.EmployeeEmail   = "Ahmad@gmail";
@@ -37,6 +37,7 @@ namespace FirstGroup_1.Controllers
         {
             return View();
         }
+
 
     }
 }

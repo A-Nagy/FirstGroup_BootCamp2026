@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|h:\\bootcamp\\1-firstgroup_bootcamp2026\\4-asp.netcore\\firstgroup_1\\firstgroup_1\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|solutionrelative:firstgroup_1\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|h:\\bootcamp\\1-firstgroup_bootcamp2026\\4-asp.netcore\\firstgroup_1\\firstgroup_1\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|solutionrelative:firstgroup_1\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|h:\\bootcamp\\1-firstgroup_bootcamp2026\\4-asp.netcore\\firstgroup_1\\firstgroup_1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|solutionrelative:firstgroup_1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|h:\\bootcamp\\1-firstgroup_bootcamp2026\\4-asp.netcore\\firstgroup_1\\firstgroup_1\\views\\roles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|solutionrelative:firstgroup_1\\views\\roles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|h:\\bootcamp\\1-firstgroup_bootcamp2026\\4-asp.netcore\\firstgroup_1\\firstgroup_1\\security\\permissionsnames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|solutionrelative:firstgroup_1\\security\\permissionsnames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|h:\\bootcamp\\1-firstgroup_bootcamp2026\\4-asp.netcore\\firstgroup_1\\firstgroup_1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|solutionrelative:firstgroup_1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|h:\\bootcamp\\1-firstgroup_bootcamp2026\\4-asp.netcore\\firstgroup_1\\firstgroup_1\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|solutionrelative:firstgroup_1\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|h:\\bootcamp\\1-firstgroup_bootcamp2026\\4-asp.netcore\\firstgroup_1\\firstgroup_1\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0068E963-65CC-4CAE-9014-BEA83BA160D3}|FirstGroup_1\\FirstGroup_1.csproj|solutionrelative:firstgroup_1\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +46,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "FirstGroup_1\\Controllers\\CategoriesController.cs",
-              "ToolTip": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "FirstGroup_1\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Views\\Roles\\Index.cshtml",
+              "RelativeDocumentMoniker": "FirstGroup_1\\Views\\Roles\\Index.cshtml",
+              "ToolTip": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Views\\Roles\\Index.cshtml",
+              "RelativeToolTip": "FirstGroup_1\\Views\\Roles\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T14:37:19.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PermissionsNames.cs",
+              "DocumentMoniker": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Security\\PermissionsNames.cs",
+              "RelativeDocumentMoniker": "FirstGroup_1\\Security\\PermissionsNames.cs",
+              "ToolTip": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Security\\PermissionsNames.cs",
+              "RelativeToolTip": "FirstGroup_1\\Security\\PermissionsNames.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-19T14:28:34.464Z",
+              "WhenOpened": "2026-10-03T14:30:40.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "FirstGroup_1\\Controllers\\RolesController.cs",
+              "ToolTip": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "FirstGroup_1\\Controllers\\RolesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T14:28:12.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "FirstGroup_1\\Controllers\\AccountController.cs",
+              "ToolTip": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "FirstGroup_1\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T14:28:08.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Views\\Employees\\Index.cshtml",
+              "RelativeDocumentMoniker": "FirstGroup_1\\Views\\Employees\\Index.cshtml",
+              "ToolTip": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Views\\Employees\\Index.cshtml",
+              "RelativeToolTip": "FirstGroup_1\\Views\\Employees\\Index.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T14:17:47.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FirstGroup_1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FirstGroup_1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwCoAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T14:05:12.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "EmployeesController.cs",
               "DocumentMoniker": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Controllers\\EmployeesController.cs",
               "RelativeDocumentMoniker": "FirstGroup_1\\Controllers\\EmployeesController.cs",
               "ToolTip": "H:\\Bootcamp\\1-FirstGroup_BootCamp2026\\4-Asp.NetCore\\FirstGroup_1\\FirstGroup_1\\Controllers\\EmployeesController.cs",
               "RelativeToolTip": "FirstGroup_1\\Controllers\\EmployeesController.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAgwHUAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAIEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-19T14:19:39.891Z",
+              "WhenOpened": "2026-10-03T14:01:24.086Z",
               "EditorCaption": ""
             }
           ]

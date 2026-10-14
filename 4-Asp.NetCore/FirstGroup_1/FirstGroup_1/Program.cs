@@ -1,4 +1,7 @@
 using FirstGroup_1.Data;
+using FirstGroup_1.Repositories.Base;
+using FirstGroup_1.Repositories.Employees;
+using FirstGroup_1.Repositories.Users;
 using FirstGroup_1.Security;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +13,10 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped(typeof(IEmployeeRepository),typeof(EmployeeRepository));
+builder.Services.AddScoped(typeof(IUsersRepository), typeof(UsersRepository));
+
 
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>

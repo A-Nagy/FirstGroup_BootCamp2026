@@ -26,7 +26,7 @@ namespace FirstGroup_1.Controllers
         {
             if (User.Identity?.IsAuthenticated == true)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Dashboard");
             }
 
             ViewBag.ReturnUrl = returnUrl;
@@ -106,7 +106,7 @@ namespace FirstGroup_1.Controllers
                 return Redirect(returnUrl);
             }
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index","Dashboard");
         }
        
         [Authorize]

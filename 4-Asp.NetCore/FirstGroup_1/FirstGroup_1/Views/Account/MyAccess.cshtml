@@ -1,0 +1,49 @@
+﻿
+
+@{
+    ViewData["Title"] = "My Access";
+    var roles = User.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).Distinct().ToList();
+    var permissions = User.Claims.Where(c => c.Type == PermissionsNames.ClaimType).Select(c => c.Value).Distinct().ToList();
+
+}
+
+<h1>@User.Identity?.Name Access</h1>
+<hr/>
+
+<h3>Roles: </h3>
+@if (roles.Any())
+{
+    <ul class="list-group mb-4">
+        @foreach (var role in roles)
+        {
+         <li class="list-group-item"> @role</li>   
+        }
+    </ul>
+}else
+{
+    <div class="alert alert-warning">
+        No Role Assigned ...
+    </div>
+    
+}
+
+<hr />
+
+<h3>Permissions</h3>
+
+@if (permissions.Any())
+{
+    <ul class="list-group mb-4">
+        @foreach (var permission in permissions)
+        {
+            <li class="list-group-item"> @permission</li>
+        }
+    </ul>
+}
+else
+{
+    <div class="alert alert-warning">
+        No Permission For you  ...
+    </div>
+
+}

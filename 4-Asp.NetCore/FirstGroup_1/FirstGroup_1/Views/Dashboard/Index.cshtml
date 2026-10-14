@@ -6,3 +6,68 @@
 <h1>Welecome , @User.Identity?.Name</h1>
 <hr />
 
+<div class="row">
+@if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Employees List</h4>
+                    <p>view and Mange Employees According to your Permissions</p>
+                    <a asp-controller="Employees" asp-action="Index" class="btn btn-primary"> Employees </a>
+                </div>
+            </div>
+        </div>
+    }
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.DepartmentView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Departments List</h4>
+                    <p>view and Mange Departments According to your Permissions</p>
+                    <a asp-controller="Employees" asp-action="Index" class="btn btn-primary"> Departments </a>
+                </div>
+            </div>
+        </div>
+    }
+@*     @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Emploees List</h4>
+                    <p>view and Mange Employees According to your Permissions</p>
+                    <a asp-controller="Employees" asp-action="Index" class="btn btn-primary"> Employees </a>
+                </div>
+            </div>
+        </div>
+    }
+  
+    @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeView))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Emploees List</h4>
+                    <p>view and Mange Employees According to your Permissions</p>
+                    <a asp-controller="Employees" asp-action="Index" class="btn btn-primary"> Employees </a>
+                </div>
+            </div>
+        </div>
+    }
+    *@
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Admistration Pages</h4>
+                    <p>Setting Pages And Configration</p>
+                    <a href="#" class="btn btn-primary"> Settings </a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

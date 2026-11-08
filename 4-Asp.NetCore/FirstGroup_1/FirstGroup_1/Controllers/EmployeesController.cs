@@ -1,9 +1,7 @@
-﻿using FirstGroup_1.Data;
-using FirstGroup_1.Dtos;
-using FirstGroup_1.Models;
-using FirstGroup_1.Repositories.Base;
-using FirstGroup_1.Repositories.Employees;
-using FirstGroup_1.Security;
+﻿using FirstGroup_1.Application.Abstractions.Services;
+using FirstGroup_1.Application.Dtos;
+using FirstGroup_1.Application.Security;
+using FirstGroup_1.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -90,16 +88,21 @@ namespace FirstGroup_1.Controllers
         //Dependency injection is used to provide the controller with an instance of the ApplicationDbContext,
         //which allows it to interact with the database.
 
-        private readonly ApplicationDbContext _context;
+          //private readonly ApplicationDbContext _context;
         //private readonly IEmployeeRepository _empRepo;
-        private readonly IRepository<Employee> _employeeRepository;
-        private readonly IRepository<Department> _DepartmentRepository;
+        //private readonly IRepository<Employee>   _employeeRepository;
+        //private readonly IRepository<Department> _DepartmentRepository;
+        //private readonly IUnitOfWork _unit;
+        private readonly IEmployeeService _service;
 
-        public EmployeesController(ApplicationDbContext context, IEmployeeRepository empRepo, IRepository<Employee> employeeRepository)
+        public EmployeesController(IEmployeeService service)
         {
-           _context = context;
+     
+            _service = service;
+            //  _context = context;
             //_empRepo = empRepo;
-            _employeeRepository = employeeRepository;
+            //_unit = unit;
+            //  _employeeRepository = employeeRepository;
         }
 
 
@@ -110,9 +113,11 @@ namespace FirstGroup_1.Controllers
             // Retrieve the list of employees from the database using Entity Framework
             // 'ToList()' It Equal Select all employees from the Employees table in the database and convert them to a list.
 
-            IEnumerable<Employee> Employees = _employeeRepository.GetAll();
+            //IEnumerable<Employee> Employees = _unit.Employees.GetAll();
             /* _context.Employees.Include(e => e.Department).ToList();*/
             //include() Load Realeted Department Data
+
+            var Employees = _service.GetAllEmployees();
             return View(Employees);
         }
         // Content : Text 
@@ -122,31 +127,32 @@ namespace FirstGroup_1.Controllers
         // BadRequest: Error For Api
         // RedirectTo Action() : Retrive Data from Anther Action
 
-        [HttpGet]
-        public IActionResult GetAllEmployees()
-        {
+        //[HttpGet]
+        //public IActionResult GetAllEmployees()
+        //{
 
-            //  List<Employee> Employees = _context.Employees.Include(e => e.Department).ToList();
-            List<EmployeeListDto> Employees = _context.Employees.Select(e =>new EmployeeListDto
-            {
-                Id= e.Id,
-                Name = e.Name,
-                Salay =e.Salary,
-                DepartedName = e.Department !=null ? e.Department.Name : null }).ToList();
+        //    //  List<Employee> Employees = _context.Employees.Include(e => e.Department).ToList();
+        //    List<EmployeeListDto> Employees = _context.Employees.Select(e =>new EmployeeListDto
+        //    {
+        //        Id= e.Id,
+        //        Name = e.Name,
+        //        Salay =e.Salary,
+        //        DepartedName = e.Department !=null ? e.Department.Name : null }).ToList();
 
-            return Ok(Employees);
-            // View()     : Screen
-            // NotFound() : Not Found Screen
-            // Content()  : Text
-            // Ok()       : Data
-            // BadRequest() :Error Data
-            // RedirectTo Action() : Retrive Data from Anther Action
-        }
+        //    return Ok(Employees);
+        //    // View()     : Screen
+        //    // NotFound() : Not Found Screen
+        //    // Content()  : Text
+        //    // Ok()       : Data
+        //    // BadRequest() :Error Data
+        //    // RedirectTo Action() : Retrive Data from Anther Action
+        //}
         [Authorize(Roles ="Admin")]
         public IActionResult Details(int Id)
         {
             // _context.Employees.Include(e => e.Department).FirstOrDefault(e=> e.Id==Id);
-           Employee? emp =_employeeRepository.GetById(Id);
+              //_unit.Employees.GetById(Id);
+            var emp = _service.GetEmployeeById(Id);
             if (emp == null)
             {
                 return NotFound();
@@ -163,11 +169,14 @@ namespace FirstGroup_1.Controllers
         [Authorize(Policy = PermissionsNames.EmployeeCreate)]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Employee emp)
+        public IActionResult Create( CreateEmployeeDto emp)
         {
             if (ModelState.IsValid)
             {
-                _employeeRepository.Add(emp);
+                _service.AddEmployees(emp);
+                _service.SaveEmployee();
+                //_unit.Employees.Add(emp);
+                //_unit.Save();
                 //_context.Employees.Add(emp);
                 //_context.SaveChanges();
 
@@ -180,8 +189,8 @@ namespace FirstGroup_1.Controllers
         [Authorize(Policy =PermissionsNames.EmployeeEdit)]
         [HttpGet]
         public IActionResult Update(int Id) 
-        {
-           Employee? emp = _employeeRepository.GetById(Id);
+        {/*_unit.Employees.GetById(Id);*/
+            var emp = _service.GetEmployeeById(Id);
             if (emp == null)
             {
                 return NotFound();
@@ -192,11 +201,14 @@ namespace FirstGroup_1.Controllers
         [Authorize(Policy = PermissionsNames.EmployeeEdit)]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(Employee employee)
+        public IActionResult Update(UpdateEmployeeDto employee)
         {
             if (ModelState.IsValid)
             {
-                _employeeRepository.Update(employee);
+                _service.UpdateEmployees(employee);
+                _service.SaveEmployee();
+                //_unit.Employees.Update(employee);
+                //_unit.Save();
                 //_context.Employees.Update(employee);
                 //_context.SaveChanges();
                 return RedirectToAction("Index");
@@ -208,7 +220,8 @@ namespace FirstGroup_1.Controllers
         [Authorize(Policy = PermissionsNames.EmployeeDelete)]
         public IActionResult Delete(int Id)
         {
-            Employee? emp = _employeeRepository.GetById(Id);
+            /*_unit.Employees.GetById(Id);*/
+            var emp = _service.GetEmployeeById(Id);
             if (emp == null)
             {
                 return NotFound();
@@ -221,17 +234,20 @@ namespace FirstGroup_1.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Delete(Employee employee)
         {
+            _service.DeleteEmployees(employee.Id);
+            _service.SaveEmployee();
 
-            _employeeRepository?.Delete(employee);
-                //_context.Employees.Remove(employee);
-                //_context.SaveChanges();
+            //_unit.Employees?.Delete(employee);
+            //_unit.Save();
+            //_context.Employees.Remove(employee);
+            //_context.SaveChanges();
                 return RedirectToAction("Index");
            
           
         }
         private void LoadDepartments()
-        {
-            IEnumerable<Department> departments = _DepartmentRepository.GetAll();
+        {/* _unit.Departments.GetAll();*/
+            IEnumerable<DepartmentDto> departments = _service.GetAllDepartments();
             ViewBag.Departments = new SelectList(departments,"Id","Name");
         }
 

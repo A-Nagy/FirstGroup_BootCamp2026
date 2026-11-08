@@ -1,28 +1,32 @@
-﻿using FirstGroup_1.Data;
-using FirstGroup_1.Models;
+﻿using FirstGroup_1.Application.Abstractions.Repositories;
+ 
+using FirstGroup_1.Domain;
+using FirstGroup_1.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FirstGroup_1.Controllers
 {
     public class CategoriesController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        //  private readonly ApplicationDbContext _context;
+        private readonly IUnitOfWork _unit;
 
-        public CategoriesController(ApplicationDbContext context)
+        public CategoriesController(ApplicationDbContext context, IUnitOfWork unit)
         {
-            _context = context;
+           // _context = context;
+            _unit = unit;
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            List<Category> categories = _context.Categories.ToList();
+            IEnumerable<Category> categories = _unit.Categories.GetAll();
             return View(categories);
         }
         //Get : Category Deatils
         public IActionResult Details(int Id)
         {
-            Category? cat = _context.Categories.Find(Id);
+            Category? cat = _unit.Categories.GetById(Id);
             if (cat == null)
             {
                 return NotFound();
@@ -41,8 +45,8 @@ namespace FirstGroup_1.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Categories.Add(cat);
-                _context.SaveChanges();
+                _unit.Categories.Add(cat);
+                _unit.Save();
 
                 return RedirectToAction("Index");
             }
@@ -53,7 +57,7 @@ namespace FirstGroup_1.Controllers
         [HttpGet]
         public IActionResult Update(int Id)
         {
-            Category? category = _context.Categories.Find(Id);
+            Category? category = _unit.Categories.GetById(Id);
             if (category == null)
             {
                 return NotFound();
@@ -65,8 +69,8 @@ namespace FirstGroup_1.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Categories.Update(cat);
-                _context.SaveChanges();
+                _unit.Categories.Update(cat);
+                _unit.Save();
                 return RedirectToAction("Index");
             }
             return View(cat);
@@ -74,7 +78,7 @@ namespace FirstGroup_1.Controllers
         [HttpGet]
         public IActionResult Delete(int Id)
         {
-            Category? cat = _context.Categories.Find(Id);
+            Category? cat = _unit.Categories.GetById(Id);
             if (cat == null)
             {
                 return NotFound();
@@ -85,8 +89,8 @@ namespace FirstGroup_1.Controllers
         public IActionResult Delete(Category cat)
         {
 
-            _context.Categories.Remove(cat);
-            _context.SaveChanges();
+            _unit.Categories.Delete(cat);
+            _unit.Save();
             return RedirectToAction("Index");
 
 

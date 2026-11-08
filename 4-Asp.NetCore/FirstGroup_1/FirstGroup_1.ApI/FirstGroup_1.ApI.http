@@ -1,0 +1,6 @@
+@FirstGroup_1.ApI_HostAddress = http://localhost:5066
+
+GET {{FirstGroup_1.ApI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

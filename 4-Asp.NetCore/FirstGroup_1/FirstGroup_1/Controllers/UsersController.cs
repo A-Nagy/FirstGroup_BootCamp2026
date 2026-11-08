@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FirstGroup_1.Application.Abstractions.Repositories;
+using FirstGroup_1.Domain;
+using FirstGroup_1.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using FirstGroup_1.Data;
-using FirstGroup_1.Models;
-using FirstGroup_1.Repositories.Users;
-using FirstGroup_1.Repositories.Base;
-
+ 
 namespace FirstGroup_1.Controllers
 {
     public class UsersController : Controller

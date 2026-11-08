@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using FirstGroup_1.Data;
-using FirstGroup_1.Models;
+ 
 using Microsoft.AspNetCore.Authorization;
+using FirstGroup_1.Infrastructure.Data;
+using FirstGroup_1.Domain;
 
 namespace FirstGroup_1.Controllers
 {

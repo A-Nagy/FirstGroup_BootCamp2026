@@ -1,7 +1,10 @@
-﻿using FirstGroup_1.Data;
+﻿
+using FirstGroup_1.Application.Security;
+using FirstGroup_1.Domain;
+using FirstGroup_1.Infrastructure.Data;
 using FirstGroup_1.Models;
 using FirstGroup_1.Models.ViewModels;
-using FirstGroup_1.Security;
+
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;

@@ -1,8 +1,10 @@
-using FirstGroup_1.Data;
-using FirstGroup_1.Repositories.Base;
-using FirstGroup_1.Repositories.Employees;
-using FirstGroup_1.Repositories.Users;
-using FirstGroup_1.Security;
+
+using FirstGroup_1.Application.Abstractions.Repositories;
+using FirstGroup_1.Application.Abstractions.Services;
+using FirstGroup_1.Application.Security;
+using FirstGroup_1.Infrastructure.Data;
+using FirstGroup_1.Infrastructure.Repositories;
+using FirstGroup_1.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +18,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(IEmployeeRepository),typeof(EmployeeRepository));
 builder.Services.AddScoped(typeof(IUsersRepository), typeof(UsersRepository));
+builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
+builder.Services.AddScoped(typeof(IEmployeeService), typeof(EmployeeService));
+
 
 
 builder.Services.AddAuthentication(

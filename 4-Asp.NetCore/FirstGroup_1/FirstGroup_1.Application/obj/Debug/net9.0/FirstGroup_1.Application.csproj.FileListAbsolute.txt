@@ -1,0 +1,16 @@
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\bin\Debug\net9.0\FirstGroup_1.Application.deps.json
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\bin\Debug\net9.0\FirstGroup_1.Application.dll
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\bin\Debug\net9.0\FirstGroup_1.Application.pdb
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\bin\Debug\net9.0\FirstGroup_1.Domain.dll
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\bin\Debug\net9.0\FirstGroup_1.Domain.pdb
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGroup_1.Application.csproj.AssemblyReference.cache
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGroup_1.Application.GeneratedMSBuildEditorConfig.editorconfig
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGroup_1.Application.AssemblyInfoInputs.cache
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGroup_1.Application.AssemblyInfo.cs
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGroup_1.Application.csproj.CoreCompileInputs.cache
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGroup_1.Application.sourcelink.json
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGro.D9B44671.Up2Date
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGroup_1.Application.dll
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\refint\FirstGroup_1.Application.dll
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\FirstGroup_1.Application.pdb
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Application\obj\Debug\net9.0\ref\FirstGroup_1.Application.dll

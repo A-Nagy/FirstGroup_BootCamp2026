@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "FirstGroup_1\\FirstGroup_1.WebDashboad.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "FirstGroup_1.ApI\\FirstGroup_1.ApI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

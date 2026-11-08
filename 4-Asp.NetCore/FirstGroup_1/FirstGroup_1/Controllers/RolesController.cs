@@ -1,6 +1,7 @@
-﻿using FirstGroup_1.Data;
-using FirstGroup_1.Models;
-using FirstGroup_1.Security;
+﻿
+using FirstGroup_1.Domain;
+using FirstGroup_1.Infrastructure.Data;
+ 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;

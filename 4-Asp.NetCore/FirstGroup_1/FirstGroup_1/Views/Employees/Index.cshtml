@@ -1,4 +1,5 @@
-﻿@using FirstGroup_1.Security
+﻿
+ 
 @* Old Code *@
 @* @model List<Employee>
 
@@ -45,7 +46,7 @@
 @{
     ViewData["Title"] = "Employees Mangment";
 }
-@model List<Employee>
+@model IEnumerable<EmployeeListDto>
 
 <h1>Employees Infromation</h1>
 @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeCreate))
@@ -62,11 +63,12 @@
         <tr>
             <th>#</th>
             <th>Name</th>
-            <th>Address</th>
+          @*   <th>Address</th> *@
             <th>Salary</th>
-            <th>City</th>
+         @*   
+             <th>City</th>
             <th>Phone</th>
-            <th>Email</th>
+            <th>Email</th> *@
             <th>Department</th>
         </tr>
     </thead>
@@ -76,12 +78,14 @@
             <tr>
                 <td>@employee.Id</td>
                 <td>@employee.Name</td>
-                <td>@employee.Address</td>
+                <td>@employee.Salay</td>
+                <td>@employee.DepartedName</td>
+           @*      <td>@employee.Address</td>
                 <td>@employee.Salary</td>
                 <td>@employee.City</td>
                 <td>@employee.Phone</td>
                 <td>@employee.Email</td>
-                <td>@employee.Department?.Name</td>
+                <td>@employee.Department?.Name</td> *@
                 <td>
                     @if (User.HasClaim(PermissionsNames.ClaimType, PermissionsNames.EmployeeEdit))
                     {

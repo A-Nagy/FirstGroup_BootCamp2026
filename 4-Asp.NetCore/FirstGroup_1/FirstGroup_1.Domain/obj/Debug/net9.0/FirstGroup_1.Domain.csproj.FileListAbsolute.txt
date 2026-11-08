@@ -1,0 +1,12 @@
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\bin\Debug\net9.0\FirstGroup_1.Domain.deps.json
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\bin\Debug\net9.0\FirstGroup_1.Domain.dll
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\bin\Debug\net9.0\FirstGroup_1.Domain.pdb
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\FirstGroup_1.Domain.GeneratedMSBuildEditorConfig.editorconfig
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\FirstGroup_1.Domain.AssemblyInfoInputs.cache
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\FirstGroup_1.Domain.AssemblyInfo.cs
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\FirstGroup_1.Domain.csproj.CoreCompileInputs.cache
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\FirstGroup_1.Domain.sourcelink.json
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\FirstGroup_1.Domain.dll
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\refint\FirstGroup_1.Domain.dll
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\FirstGroup_1.Domain.pdb
+H:\Bootcamp\1-FirstGroup_BootCamp2026\4-Asp.NetCore\FirstGroup_1\FirstGroup_1.Domain\obj\Debug\net9.0\ref\FirstGroup_1.Domain.dll
